@@ -7,14 +7,22 @@ import com.example.android_task_2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    //private var correctAnswers = arrayOf<String>(resources.getString(R.string.T),resources.getString(R.string.F),resources.getString(R.string.F),resources.getString(R.string.F))
+    private var correctAnswers:Array<String?> = arrayOfNulls(4)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root) // Sets the activity layout
 
+        populateCorrectAnswersArray();
         setButtonListener()
+    }
+
+    fun populateCorrectAnswersArray() {
+        correctAnswers[0] = resources.getString(R.string.T)
+        correctAnswers[1] = resources.getString(R.string.F)
+        correctAnswers[2] = resources.getString(R.string.F)
+        correctAnswers[3] = resources.getString(R.string.F)
     }
 
     fun setButtonListener() {
