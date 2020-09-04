@@ -7,7 +7,7 @@ import com.example.android_task_2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private var correctAnswers = arrayOf<String>(resources.getString(R.string.T),resources.getString(R.string.F),resources.getString(R.string.F),resources.getString(R.string.F))
+    //private var correctAnswers = arrayOf<String>(resources.getString(R.string.T),resources.getString(R.string.F),resources.getString(R.string.F),resources.getString(R.string.F))
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onSubmitButtonPressed() {
+        /*
         val answers = arrayOf(binding.etAnswerRowOne.text.toString(),binding.etAnswerRowTwo.text.toString(),binding.etAnswerRowThree.text.toString(),binding.etAnswerRowFour.text.toString())
         var amountCorrect = 0;
         for (i in 0..answers.size) {
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        showAmountCorrect(amountCorrect);
+        showAmountCorrect(amountCorrect); */
     }
 
     fun showAmountCorrect(amountCorrect: Int) {
