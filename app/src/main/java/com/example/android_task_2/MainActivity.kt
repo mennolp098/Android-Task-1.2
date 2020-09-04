@@ -32,18 +32,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onSubmitButtonPressed() {
-        /*
-        val answers = arrayOf(binding.etAnswerRowOne.text.toString(),binding.etAnswerRowTwo.text.toString(),binding.etAnswerRowThree.text.toString(),binding.etAnswerRowFour.text.toString())
+        val answers:Array<String?> = getAnswersArray();
         var amountCorrect = 0;
-        for (i in 0..answers.size) {
-            if(answers.get(i) == correctAnswers.get(i))
+        for (i in answers.indices) {
+            if(answers[i] == correctAnswers[i])
             {
                 amountCorrect++;
                 continue;
             }
         }
 
-        showAmountCorrect(amountCorrect); */
+        showAmountCorrect(amountCorrect)
+    }
+
+    fun getAnswersArray():Array<String?> {
+        var answers:Array<String?> = arrayOfNulls(4)
+        answers[0] = binding.etAnswerRowOne.text.toString()
+        answers[1] = binding.etAnswerRowTwo.text.toString()
+        answers[2] = binding.etAnswerRowThree.text.toString()
+        answers[3] = binding.etAnswerRowFour.text.toString()
+        return answers
     }
 
     fun showAmountCorrect(amountCorrect: Int) {
